@@ -19,7 +19,7 @@ define AESD_ASSIGNMENTS_INSTALL_TARGET_CMDS
 	# Config files
 	$(INSTALL) -d 0755 $(TARGET_DIR)/etc/finder-app/conf
 	$(INSTALL) -m 0644 $(@D)/conf/* $(TARGET_DIR)/etc/finder-app/conf/
-    $(INSTALL) -m 0755 $(@D)/assignment-autotest/test/assignment4/* $(TARGET_DIR)/bin
+        $(INSTALL) -m 0755 $(@D)/assignment-autotest/test/assignment4/* $(TARGET_DIR)/bin
 	
 	# Binaries and scripts
 	$(INSTALL) -m 0755 $(@D)/finder-app/writer $(TARGET_DIR)/usr/bin/
