@@ -1,0 +1,5 @@
+
+config BR2_PACKAGE_LDD
+	bool "ldd"
+	help
+	  This package builds and installs the misc-modules and scull drivers.
