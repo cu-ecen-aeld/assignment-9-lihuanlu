@@ -1,0 +1,5 @@
+
+config BR2_PACKAGE_AESDCHAR
+	bool "aesdchar"
+	help
+	  This package builds and installs the aesd-char-driver.

@@ -1,0 +1,31 @@
+#!/bin/sh
+
+MOD_PATH="/lib/modules/$(uname -r)/extra/"
+
+case "$1" in
+    start)
+	    echo "Load aesdchar"
+        
+        # faulty
+        insmod "$MOD_PATH"aesdchar.ko || exit 1
+        major=$(awk "\$2==\"aesdchar\" {print \$1}" /proc/devices)
+		
+        if [ ! -z "$major" ]; then
+            rm -f /dev/aesdchar
+            mknod /dev/aesdchar c $major 0
+        else
+            echo "No device found in /proc/devices for driver faulty (this driver may not allocate a device)"
+        fi
+		;;
+	stop)
+	    echo "Unload aesdchar"
+		# invoke rmmod with all arguments we got
+		rmmod aesdchar || exit 1
+		rm -f /dev/aesdchar
+		;;
+	*)
+	    echo "Usage: $0 {start|stop}"
+	exit 1
+esac
+
+exit 0
