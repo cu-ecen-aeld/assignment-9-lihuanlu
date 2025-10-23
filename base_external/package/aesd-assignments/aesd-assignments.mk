@@ -4,7 +4,7 @@
 #
 ##############################################################
 
-AESD_ASSIGNMENTS_VERSION = 67aaa10d5b950b7cce759f08e7ed49fbb947abf6
+AESD_ASSIGNMENTS_VERSION = 3872e14a498c55d5603be91c985a1c21062e6e0b
 AESD_ASSIGNMENTS_SITE = git@github.com:cu-ecen-aeld/assignments-3-and-later-lihuanlu.git
 AESD_ASSIGNMENTS_SITE_METHOD = git
 AESD_ASSIGNMENTS_GIT_SUBMODULES = YES
